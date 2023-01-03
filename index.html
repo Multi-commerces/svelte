@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>Mon espace Perso</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.12.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.12.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.12.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+   
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  
+    <style>
+      /* @font-face {
+        font-family: "Roboto";
+        src: url(https://fonts.googleapis.com/css?family=Roboto);
+      } */
+      
+    </style>
+  
+    <style media="print" type="text/css">
+      @page {
+        size: portrait;
+        margin: 0;
+      }
+
+      * {
+        border:none;
+      }
+
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 13pt;
+        line-height: 1.5;
+      }
+
+      h1 {
+      font-size: 24pt;
+      }
+      h2 {
+      font-size: 20pt;
+      margin-top: 20pt;
+      }
+     
+      h5,
+      h6 {
+      font-size: 13pt;
+      margin-top: 14pt;
+      }
+
+      /**
+      * Liens
+      */
+
+      a,
+      a:link,
+      a:visited {
+      background:
+      transparent !important;
+      color: unset;
+      font-weight: 700;
+      text-decoration: underline !important;
+      }
+
+      /**
+      * Classes utilitaires
+      */
+
+      .u-print {
+        position: fixed;
+        right: 0;
+        top: 0;
+        /* padding: 1rem; */
+        visibility: visible;
+      }
+      .u-no-print {
+        display: none !important; /* masquage des éléments de classe u-no-print */
+      }
+
+      nord-layout {
+        visibility: hidden;
+      }
+  
+      #printable-main {
+        /* position: fixed; */
+        /* right: 0; */
+        /* top: 0; */
+        /* padding: 1rem; */
+        /* visibility: visible; */
+      }
+  
+      :root {
+        color-scheme: light;
+       
+        --n-layout-padding : 2rem;
+  
+  
+        /* SKIN COLORS */
+        --n-color-surface: white;
+        --n-color-background: white;
+        --n-color-surface-raised: #fafaf8;
+        --n-color-overlay: rgba(144, 152, 152, 0.4);
+  
+        /* TEXT COLORS */
+        --n-color-text: #23211d;
+        --n-color-text-link: #078856;
+        --n-color-text-weak: #41413e;
+        --n-color-text-weaker: #75746f;
+        --n-color-text-weakest: #bab9b7;
+        --n-color-text-on-accent: white;
+        --n-color-text-error: #ce3b47;
+        --n-color-text-success: #108457;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        
+        try {
+          let app = firebase?.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          if(loadEl) loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>

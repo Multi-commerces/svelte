@@ -1,0 +1,18 @@
+/* reset margin */
+* {
+    font-family: Roboto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --n-input-inline-size: 100%;
+    --n-tab-group-padding: 0;
+}
+
+form:invalid {
+    background-color: aquamarine;
+}

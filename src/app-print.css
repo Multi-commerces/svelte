@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(https://fonts.googleapis.com/css?family=Roboto);
+}
+
+@font-face {
+    font-family: 'Lato';
+    src: url(https://fonts.googleapis.com/css?family=Lato);
+}
+
+/* reset margin */
+* {
+    font-family: Lato;
+    margin: 0;
+    padding: 0;
+}
+
+section { page-break-after: always; }
+
+
+:root {
+    --n-input-inline-size: 100%;
+    --n-tab-group-padding : 0;
+}

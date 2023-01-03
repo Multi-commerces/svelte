@@ -1,0 +1,38 @@
+{
+  "name": "my-svelte-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.2",
+    "@tsconfig/svelte": "^3.0.0",
+    "leaflet": "^1.9.3",
+    "rollup-plugin-postcss": "^4.0.2",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.1",
+    "svelte-leafletjs": "^0.9.1",
+    "svelte-preprocess": "^4.10.7",
+    "svelte-map-leaflet": "^0.5.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@budibase/svelte-ag-grid": "^1.0.4",
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@nordhealth/components": "^2.8.0",
+    "@nordhealth/css": "^2.4.0",
+    "@nordhealth/themes": "^7.0.2",
+    "ag-grid-community": "^28.2.1",
+    "moment": "^2.29.4",
+    "moment-parseformat": "^4.0.0",
+    "svelte-awesome": "^3.0.0",
+    "svelte-routing": "^1.6.0"
+  }
+}
