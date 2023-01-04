@@ -2,24 +2,35 @@
   import "/src/lib/webcomponents/my-experience.js";
   import "/src/lib/webcomponents/my-presentation.js";
 
+  import BadgeSimple from "../../lib/components/common/card/BadgeSimple.svelte";
   function imprimer_page() {
     window.print();
   }
 </script>
 
-<input
-  class="u-no-print"
-  id="impression"
-  name="impression"
-  type="button"
-  on:click={imprimer_page}
-  value="Imprimer cette page"
-/>
-
 <div class="cv-container u-print">
   <div class="header">
-    <h1>Julien <span class="text-blue text-uppercase">ILARI</span></h1>
-    <p>Développeur Fullstack JAVA</p>
+    <div style="display: flex;justify-content: space-between;">
+      <h1>Julien <span class="text-blue text-uppercase">ILARI</span></h1>
+      <div class="u-no-print">
+        <div style="display: flex;">
+          <!-- svelte-ignore a11y-missing-content -->
+          <input style="background : url('images/ico_print_24.png') no-repeat ;
+          display:block;height: 24px;width:24px;"
+            id="impression"
+            name="impression"
+            type="button"
+            on:click={imprimer_page}
+          />
+          <!-- svelte-ignore a11y-missing-content -->
+          <a style="background : url('images/ico_pdf_24.png') no-repeat ;
+          display:block;height: 24px; width:24px;" 
+          href="/cv.pdf" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+    <span>Développeur Fullstack JAVA</span>
+    
     <ul class="infos">
       <li>
         <i class="icon fas fa-at text-blue" />
@@ -77,6 +88,7 @@
         <li>
           <i class="icon fas fa-check-circle text-darkblue" /> Git &#124; Github
         </li>
+        <li><i class="icon fas fa-check-circle text-darkblue" /> SONAR CLOUD</li>
       </ul>
     </div>
     <div class="section">
@@ -90,7 +102,24 @@
   </div>
   <div class="right-column">
     <div class="header">
-      <h1>Julien <span class="text-blue text-uppercase">ILARI</span></h1>
+      <div style="display: flex;justify-content: space-between;">
+        <h1>Julien <span class="text-blue text-uppercase">ILARI</span></h1>
+        <div class="u-no-print">
+          <div style="display: flex;">
+          <!-- svelte-ignore a11y-missing-content -->
+          <input style="background : url('images/ico_print.png') no-repeat ;
+          display:block;height: 64px;width:64px;"
+            id="impression"
+            name="impression"
+            type="button"
+            on:click={imprimer_page}
+          />
+          <!-- svelte-ignore a11y-missing-content -->
+          <a href="/cv.pdf" target="_blank" style="background : url('images/ico_pdf.png') no-repeat ;
+          display:block;height: 64px;width:64px;"></a>
+          </div>
+        </div>
+      </div>
       <p>Développeur Fullstack JAVA</p>
       <ul class="infos">
         <li>
@@ -117,66 +146,79 @@
             </h2>
           </header>
         
-          Développement RestFul (Java 11), 
-          <a href="https://jsonapi.org/" title="Latest Specification (v1.1)">
-            Hateoas Json:API
-          </a> <br />
-          Projet quarkus sous
-        <a href="https://github.com/Multi-commerces/rest-api/tree/master/webmaker-business"
-          title="projet github quarkus">github</a>
-
-       <br /><br />
-        Environnement, outils et Frameworks : <br />
-        <span>
+         
+         
+        <span>Projet   
             <a href="https://quarkus.io/" title="SUPERSONIC/SUBATOMIC/JAVA">Quarkus</a>
-            <span>Microprofile</span>
+            (Java 11) sous
+            <a href="https://github.com/Multi-commerces/rest-api/tree/master/webmaker-business"
+              title="projet github quarkus">github</a>
+              , API RESTful (implementation
+              <a href="https://jsonapi.org/" title="Latest Specification (v1.1)">
+                Hateoas Json:API
+              </a>)
+         
         </span>
         
         <br /> 
-        <span>Swagger, Docker, MicroProfile (Open API, CDI, JAX-RS, JSON-P, ...), 
-          RESTEasy, Jackson,
-          hibernate-orm-panache, Nginx, Postgres, Keycloak, GitHub</span>
-       
-
+        <BadgeSimple value="MicroProfile (4.0)" />
+        <BadgeSimple value="Hateoas Json:API" />  
+        <BadgeSimple value="RESTEasy" />
+        <BadgeSimple value="Jackson" />
+        <BadgeSimple value="MapStruct" />
+        <BadgeSimple value="Lombok" />
+        <BadgeSimple value="hibernate-orm-panache" />
+        <BadgeSimple value="Docker" />
+        <BadgeSimple value="Swagger" />
+        <BadgeSimple value="Nginx" />
+        <BadgeSimple value="Postgres" />
+        <BadgeSimple value="Keycloak" />
+        <BadgeSimple value="GitHub" />    
         </article>
 
         <nord-divider style="margin: 1rem 0" />
 
         <article>
           
-          projet (deprecated)
+          Projet JAVA EE 8 (deprecated) avec
+          <a href="https://openliberty.io/">Open Liberty</a>
+          sous
           <a href="https://github.com/julien-ilari/mycommerce-ws-client/tree/master/mycommerce-parent-rest/remote/src/main/java/fr/mycommerce/service"
             title="projet github Open Liberty">
             github 
           </a>
-
-          <br /><br />
-          Environnement, outils et Frameworks : <br />
-          <a href="https://openliberty.io/">Open Liberty</a>, Microprofile, Mapstruct, lombok, deltaspike, Postgres
           <br />
-          JAVA EE 8 (JSF, CDI, JPA, ...)
+          <BadgeSimple value="microProfile (3.3)" />
+          <BadgeSimple value="JAVA EE 8 (JSF, CDI, JPA, ...)" />
+          <BadgeSimple value=" JSF(myfaces) + omnifaces + primefaces" /> 
+          <BadgeSimple value="Lombok" />
+          <BadgeSimple value="MapStruct" />
+          <BadgeSimple value="deltaspike" />
           <br />
-          JSF (myfaces) + omnifaces + primefaces
+         
 
         </article>
 
         <nord-divider style="margin: 1rem 0" />
 
         <article>
-          Svelte (+ nordhealth) + vite
+          Svelte (+ nordhealth) + vite <br />
+          Projet sous <a href="https://github.com/Multi-commerces/svelte">github</a>
         </article>
  
       </div>
 
       <div class="section">
+        <header>
         <h2>
           Expérience <br /><span class="text-blue">professionelle</span>
         </h2>
+        </header>
         <article>
           <header>
             <h3>juil. 2020 <i class="fas fa-long-arrow-alt-right" /> aujourd'hui</h3>
             <p>
-              <sapn>Développeur Fullstack Java à temps plein chez <em>OCEAN (Orange BS)</em></sapn>
+              <sapn>Développeur Fullstack Java chez <em>OCEAN (Orange BS)</em></sapn>
             </p>
           </header>  
           <article class="mission">
@@ -199,7 +241,7 @@
           <header>
               <h3>juil. 2018 <i class="fas fa-long-arrow-alt-right" /> juil. 2020</h3>
             <p>
-              <span>Développeur Java à temps plein chez <em>Inetum (GFI Informatique)</em></span>
+              <span>Développeur Java chez <em>Inetum (GFI Informatique)</em></span>
             </p>
           </header> 
           <div>
@@ -229,7 +271,7 @@
           <header>
               <h3>aoùt. 2010 <i class="fas fa-long-arrow-alt-right" /> juil. 2018</h3>
             <p>
-              <sapn>Concepteur développeur à temps plein chez <em>Atos (BULL)</em></sapn>
+              <sapn>Concepteur développeur chez <em>Atos (BULL)</em></sapn>
             </p>
           </header> 
           <div>
@@ -441,8 +483,17 @@
   
 
   @media print {
+
+    .section header h2 {
+      display: flex;
+      justify-content: space-around;
+    }
     .node, .line, .mission > div, .experience > div {
       display: none !important;
+    }
+
+    ul.infos{
+      columns: 1;
     }
 
     .left-column {
@@ -453,19 +504,22 @@
       padding-left: 15pt !important;
       width: 250pt;
     }
+
+    .content {
+      padding: 15pt !important;
+    }
     .right-column {
       display : block;
-      width: 450pt;
     }
 
     .header {
       display: block;
-      width: 450pt;
+     
     }
 
     .right-column ul {
       display: block;
-      width: 450pt;
+     
     }
 
     p {
@@ -673,5 +727,7 @@
     left: -1.5rem;
     margin-bottom: calc(0.8rem * -1);
   }
+
+  
 </style>
 
