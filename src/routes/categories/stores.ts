@@ -14,10 +14,3 @@ export const defaultValues: Attributes = {
   thumbnailUrl: undefined,
   menuThumbnailUrl: undefined,
 };
-
-
-
-
-
-
-

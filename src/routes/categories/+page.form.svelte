@@ -11,6 +11,3 @@
 </script>
 
 <FormDocument {documentStores} />
-
-<style>
-</style>

@@ -16,7 +16,3 @@ export const product: Writable<SyngleJsonAPI<any>> = writable({
     relationships: undefined,
   },
 });
-
-
-
-
