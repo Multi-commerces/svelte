@@ -30,6 +30,7 @@
     "@nordhealth/css": "^2.4.0",
     "@nordhealth/themes": "^7.0.2",
     "ag-grid-community": "^28.2.1",
+    "firebase": "^9.15.0",
     "moment": "^2.29.4",
     "moment-parseformat": "^4.0.0",
     "svelte-awesome": "^3.0.0",
