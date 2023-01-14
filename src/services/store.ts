@@ -6,7 +6,7 @@ import {
   type Writable,
 } from "svelte/store";
 
-const host = "http://localhost:8081/";
+const host = "https://api.web-maker.fr/";
 
 /**
  * serializeSchema : transformation des attributs au format ld+json
@@ -64,6 +64,11 @@ const headers = {
   "accept": "application/vnd.api+json, application/json;charset=utf-8",
   "content-type": "application/vnd.api+json",
   "X-Auth-Token": xAuthToken,
+  "Origin": "https://web-maker.fr",
+  "Referer": "https://web-maker.fr/",
+  "Sec-Fetch-Mode": "no-cors",
+  "Sec-Fetch-Dest": "empty",
+  "Sec-Fetch-Site": "cross-site",
   // "location": host,
   "include-Links": "true",
 };
