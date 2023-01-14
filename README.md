@@ -1,6 +1,12 @@
 # Svelte + TS + Vite
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+Modèle utilisé pour commencer à développer avec Svelte et TypeScript dans Vite :
+https://github.com/sveltejs/svelte
+
+Apprenez-en plus sur le site Web de Svelte
+
+## Node + NPM
+curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 
 ## IDE
 
