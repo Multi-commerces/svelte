@@ -16,6 +16,10 @@ https://github.com/sveltejs/svelte
 
 Apprenez-en plus sur le site Web de Svelte
 
+#SvelteKitPWA (SvelteKit Progressive web app)
+
+https://vite-pwa-org.netlify.app/frameworks/sveltekit.html
+
 ## Node + NPM
 curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
 
