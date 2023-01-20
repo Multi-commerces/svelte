@@ -1,3 +1,14 @@
+
+Svelte documentation: https://svelte.dev/docs
+
+Svelte tutorial: https://svelte.dev/tutorial
+
+Svelte examples: https://svelte.dev/repl
+
+Svelte and Chat blogpost: https://www.twilio.com/blog/building-a-chat-app-with-svelte.
+
+
+
 # Svelte + TS + Vite
 
 Modèle utilisé pour commencer à développer avec Svelte et TypeScript dans Vite :
